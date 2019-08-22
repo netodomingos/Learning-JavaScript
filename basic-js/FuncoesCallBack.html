@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const exibirArtigo = (id, callbackSucesso, callbackErro) => {
+
+            if (true) {
+                callbackSucesso('Funções de CallBack em Js', 'Funções de Callback são muito utilizadas!')
+            } else {
+                callbackErro('Erro ao recuperar os dados.')
+            }
+
+        }
+
+        let callbackSucesso = function (titulo, descricao) {
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr/>')
+            document.write('<p>' + descricao + '</p>')
+        }
+
+        let callbackErro = function (erro) {
+            document.write('<p>Erro:' + erro + '</p>')
+        }
+
+        exibirArtigo(1, callbackSucesso, callbackErro)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pega no meu saco</title>
+    <script>
+        let janela
+
+        const abrirPopUp = () => {
+            var n = 1
+            janela = window.open(
+                'https://getbootstrap.com.br/docs/4.1/components/input-group/#checkboxes-and-radios',
+                'nova_janela',
+                'width:400px, height: 400px')
+        }
+
+        const fecharPopUp = () => {
+            janela.close()
+
+            console.log(n)
+        }
+
+        const name = 'dale'
+
+        name = 'dale2'
+    </script>
+</head>
+
+<body>
+    <button onclick="abrirPopUp()">Abrir Janela</button>
+    <button onclick="fecharPopUp()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir Janela</button>
+
+</body>
+
+</html>
