@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Aviao
+
+        // Objeto Literal
+        let Aviao = {
+            cor: 'Branco',
+            modelo: 'Airbus a380',
+            levantarVoo() {
+                console.log('Levantar Voo')
+            }
+        }
+
+        // Função Construtora
+        let AviaoF = function () {
+            this.cor = 'Azul',
+                this.modelo = 'Boeing 787',
+                this.levantarVoo = function () {
+                    console.log('Levantar Voo')
+
+                }
+        }
+
+        let a = new AviaoF
+
+        class AviaoC {
+            constructor() {
+                this.cor = 'vermelho',
+                    this.modelo = 'Embraer E-Jets'
+            }
+            levantarVoo() {
+                console.log('Levantar Voo')
+
+            }
+        }
+
+        let a2 = new AviaoC
+
+        /*
+        console.log(Aviao)
+        console.log(a)
+        console.log(a2)
+        */
+
+        let animal = {
+            attr1: 'a'
+        }
+        let vertebrado = {
+            __proto__: animal,
+            attr2: 'b'
+        }
+        let ave = {
+            __proto__: vertebrado,
+            attr3: 'c'
+        }
+
+        console.log(
+            ave.attr2,
+            ave.attr1,
+            ave.attr2,
+            ave.attr1,
+            ave.attr3,
+            ave.attr1
+        )
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
